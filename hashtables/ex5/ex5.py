@@ -15,8 +15,7 @@ def finder(files, queries):
             q_dict[last] = [file]
     for query in queries:
         if query in q_dict:
-            for file in q_dict[query]:
-                result.append(file)
+            result += [file for file in q_dict[query]]
 
     return result
 
